@@ -1,0 +1,11 @@
+const express = require('express')
+const path = require('path')
+
+const app= new express();
+
+//set static folder
+app.use(express.static(path.join(__dirname, 'bitches')));
+
+const Port=(process.env.Port||5000);
+
+app.listen(Port, console.log(`this is it ${Port}`))
